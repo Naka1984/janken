@@ -116,14 +116,14 @@ function playingfirst() {
 function playingsecond() {
     changescene(scenetop, scecedisplay);
     count = 3;
-    $("#next-turn").html("コンピューターの番です");
+    $("#next-turn").html("コンピューターが考えています...");
     setTimeout("com();",3000)
     player()
 }
 
 function turn_action() {
     if (count % 2 == 0) {
-        $("#next-turn").html("コンピューターの番です");
+        $("#next-turn").html("コンピューターが考えています...");
     } else {
         $("#next-turn").html("あなたの番です");
     }
@@ -232,7 +232,7 @@ function Judgment() {
     }
 
     function judgtextcreate(result) {
-        let judgtext = ["あなたの勝ちです", "コンピューターの勝ちです", "引き分けです"];
+        let judgtext = ["おめでとう！あなたの勝ちです！", "コンピューターの勝ちです", "引き分けです"];
         judgdisplay.textContent = judgtext[result];
         changescene(scenetop, sceneend);
         scecedisplay.classList.remove("is-visible");
